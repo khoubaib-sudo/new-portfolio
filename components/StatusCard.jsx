@@ -1,32 +1,35 @@
+"use client";
 import { PiArrowUpRight } from "react-icons/pi";
 
 export default function StatusCard() {
   return (
-    <div className="dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 shadow-xl relative rounded-lg sm:h-40">
-      <div className="absolute w-full p-2">
-        <div className="flex justify-between items-center">
+    <div className="relative dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 shadow-xl rounded-lg p-4 aspect-square">
+      <div className="h-full flex flex-col">
+        <div className="flex justify-between items-start">
           <p className="text-xs">Mode</p>
-          <div>
-            <span className="mr-1.5 flex justify-center h-2 w-2 items-center">
-              <span className="absolute flex w-2 h-2 rounded-full opacity-75 animation-delay-4000 animate-ping dark:bg-lime-500 bg-yellow-400"></span>
-              <span className="relative inline-flex w-1 h-1 rounded-full dark:bg-lime-500 bg-yellow-400"></span>
+          <div className="flex items-center">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full rounded-full opacity-75 animate-ping dark:bg-lime-500 bg-yellow-400"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 dark:bg-lime-500 bg-yellow-400"></span>
             </span>
           </div>
         </div>
-        <div className="w-full h-[0.9px] dark:bg-neutral-600 bg-neutral-400/60 top-7" />
-        <div>
-          <p className="text-xs font-semibold max-sm:mt-10 sm:mt-4">
+        
+        <div className="w-full h-px dark:bg-neutral-600 bg-neutral-400/60 my-2" />
+        
+        <div className="flex-grow flex flex-col justify-between">
+          <p className="text-xs font-semibold mb-4">
             Open for contract and freelance projects <br />
             Let's work together hit me up for a collab 🦾
           </p>
 
           <a
             href="mailto:khoubaiebmaamouri@gmail.com"
-            className="w-full sm:w-full"
+            className="mt-auto"
           >
-            <button className="text-xs flex w-full items-center justify-between border dark:border-neutral-600 border-neutral-400/60 mt-3 rounded-full p-1 px-2 dark:bg-neutral-700/40 sm:w-full">
+            <button className="text-xs flex w-full items-center justify-between border dark:border-neutral-600 border-neutral-400/60 rounded-full p-1.5 px-3 dark:bg-neutral-700/40 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
               <span>Contact me</span>
-              <PiArrowUpRight />
+              <PiArrowUpRight className="text-sm" />
             </button>
           </a>
         </div>

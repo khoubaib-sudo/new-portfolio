@@ -18,12 +18,11 @@ function Homepage() {
     <>
     <Head>
         <link rel="icon" href="/favicon.ico" />
-        {/* Optional: add a title */}
         <title>Khoubaieb Maamouri | Portfolio</title>
       </Head>
 
     <div className="w-full px-4 pt-8 max-w-6xl mx-auto">
-      <div className="grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 gap-5 grid-flow-row-dense">
+    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 auto-rows-[minmax(160px,auto)]">
         <LocationCard />
         <StatusCard />
         <AboutCard />
