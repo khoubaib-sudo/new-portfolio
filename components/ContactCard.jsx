@@ -10,25 +10,26 @@ export default function ContactCard() {
   const contacts = [
     {
       name: "Linkedin",
-      icon: <RiLinkedinFill className="text-xl" />,
+      icon: <RiLinkedinFill className="text-4xl" />,
       href: "https://www.linkedin.com/in/khoubaib-maamouri/",
     },
     {
       name: "GitHub",
-      icon: <TiSocialGithub className="text-3xl" />,
+      icon: <TiSocialGithub className="text-5xl" />,
       href: "https://github.com/khoubaib-sudo",
     },
     {
       name: "Call me",
-      icon: <TbPhoneFilled className="text-xl" />,
+      icon: <TbPhoneFilled className="text-4xl" />,
       href: "tel:+49 176 35783326",
     },
     {
       name: "E-mail",
-      icon: <IoIosMailUnread className="text-xl" />,
+      icon: <IoIosMailUnread className="text-4xl" />,
       href: "mailto:khoubaiebmaamouri@gmail.com",
     },
   ];
+  
 
   return (
     <div className="dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 shadow-xl rounded-lg min-h-[50px] col-span-2 relative">
@@ -37,7 +38,7 @@ export default function ContactCard() {
         <div className="w-full h-[0.9px] dark:bg-neutral-600 bg-neutral-400/60 mt-1 top-7" />
       </div>
 
-      <div className="mt-14 mb-4">
+      <div className="mt-14 mb-4 ">
         <div className="flex justify-center gap-x-2 px-2">
           {contacts.map((contact) => (
             <Tooltip
@@ -48,7 +49,7 @@ export default function ContactCard() {
             >
               <Link
                 href={contact.href}
-                className="rounded-full border dark:border-neutral-600 cursor-pointer border-neutral-400/60 p-2 w-16 h-16 flex items-center justify-center"
+                className="rounded-full border dark:border-neutral-600 cursor-pointer border-neutral-400/60 p-2 w-16 h-16 flex items-center justify-center transition-transform duration-200 hover:scale-110"
               >
                 {contact.icon}
               </Link>

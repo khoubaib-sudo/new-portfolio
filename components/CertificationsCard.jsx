@@ -74,10 +74,11 @@ export default function CertificationsCard() {
       </div>
       {/* Scroll Hint */}
       {!atBottom && (
-        <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 animate-bounce text-neutral-400 text-xs z-30">
-          <RiArrowDownDoubleFill className="text-[15px]" />
-        </div>
-      )}
+  <div className="absolute inset-x-0 bottom-4 flex justify-center z-30">
+    <RiArrowDownDoubleFill className="text-[15px] animate-bounce text-neutral-400" />
+  </div>
+)}
+
     </div>
   );
 }

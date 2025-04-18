@@ -3,9 +3,6 @@ import { motion } from "framer-motion";
 export default function AboutCard() {
   return (
     <motion.div
-      drag
-      dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
-      dragElastic={1}
       className="dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 z-20 cursor-pointer relative shadow-xl rounded-lg col-span-2"
     >
       <div className="absolute w-full p-2 z-10">
