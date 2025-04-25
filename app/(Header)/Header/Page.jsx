@@ -1,9 +1,10 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import { CgDarkMode } from "react-icons/cg";
+import { HiMiniLanguage } from "react-icons/hi2"; // Make sure this icon is imported!
 import Image from "next/image";
 
 function HeaderPage() {
@@ -12,6 +13,14 @@ function HeaderPage() {
 
   const toggleTheme = () => {
     setTheme(currentTheme === "dark" ? "light" : "dark");
+  };
+
+  // Fake locale toggle for now
+  const [locale, setLocale] = useState("EN");
+
+  const toggleLanguage = () => {
+    setLocale(locale === "EN" ? "DE" : "EN");
+    // Later: use router.push to change locale
   };
 
   return (
@@ -32,32 +41,54 @@ function HeaderPage() {
           </div>
         </div>
 
-        {/* Theme Toggle Button */}
-        <motion.button
-          onClick={toggleTheme}
-          whileHover={{
-            scale: 1.2,
-            boxShadow: "0px 0px 8px rgba(255, 255, 255, 0.5)",
-          }}
-          className="p-2 rounded-full border border-neutral-600 hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-colors"
-          style={{ lineHeight: 0 }}
-        >
-          <motion.div
-            key={theme}
-            initial={{ rotate: 0, scale: 1 }}
-            animate={{ rotate: 360, scale: 1.2 }}
-            transition={{
-              type: "spring",
-              stiffness: 300,
-              damping: 20,
+        {/* Toggle Buttons */}
+        <div className="flex gap-x-3 items-center">
+          {/* Theme Button */}
+          <motion.button
+            onClick={toggleTheme}
+            whileHover={{
+              scale: 1.2,
+              boxShadow: "0px 0px 8px rgba(255, 255, 255, 0.5)",
             }}
+            className="p-2 rounded-full border border-neutral-600 hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-colors"
+            style={{ lineHeight: 0 }}
           >
-            <CgDarkMode
-              className="text-xl"
-              style={{ color: currentTheme === "dark" ? "#ffffff" : "#000000" }}
-            />
-          </motion.div>
-        </motion.button>
+            <motion.div
+              key={theme}
+              initial={{ rotate: 0, scale: 1 }}
+              animate={{ rotate: 360, scale: 1.2 }}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              }}
+            >
+              <CgDarkMode
+                className="text-xl"
+                style={{ color: currentTheme === "dark" ? "#ffffff" : "#000000" }}
+              />
+            </motion.div>
+          </motion.button>
+
+          {/* Animated Language Button */}
+<motion.button
+  onClick={toggleLanguage}
+  whileTap={{ scale: 0.95 }}
+  className="flex items-center gap-2 text-xs px-3 py-2 rounded-full border border-neutral-600 hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-colors overflow-hidden relative"
+>
+  <HiMiniLanguage className="text-base" />
+  <motion.span
+    key={locale}
+    initial={{ opacity: 0, y: -5 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: 5 }}
+    transition={{ duration: 0.3 }}
+  >
+    {locale}
+  </motion.span>
+</motion.button>
+
+        </div>
       </nav>
 
       {/* Divider */}

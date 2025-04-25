@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const projects = [
+const projects = [ 
   {
     title: "Letaff Circle",
     description:
@@ -9,20 +9,57 @@ const projects = [
     href: "https://github.com/khoubaib-sudo/letaff-circle",
   },
   {
-    title: "inventory management dashboard",
+    title: "Inventory Management Dashboard",
     description:
-      "full-stack inventory management dashboard with Next.js, Redux, Node.js, and AWS. Includes AWS services like RDS, EC2, and S3 for a scalable application",
+      "Full-stack inventory management dashboard with Next.js, Redux, Node.js, and AWS. Includes AWS services like RDS, EC2, and S3 for a scalable application.",
     href: "https://github.com/khoubaib-sudo/inventory-management",
   },
   {
-    title: "Portfolio Website",
-    description: "Designed and built my personal portfolio using Next.js and Tailwind.",
-    href: null,
+    title: "Full Stack E-Commerce Website Dashboard and CMS",
+    description:
+      "Built a full-featured e-commerce platform using Next.js, React, and Tailwind CSS. Integrated Shopify Storefront API, Contentful CMS, Stripe for payments, GraphQL for efficient data querying, and TypeScript for type safety.",
+    href: 'https://github.com/khoubaib-sudo/E-Commerce-Dashboard-CMS-store-', 
   },
   {
-    title: "3D Car Configurator",
-    description: "Interactive 3D web app allowing users to customize cars in real time.",
-    href: null,
+    title: "NFT Marketplace on Ethereum Blockchain",
+    description:
+      "Developed a decentralized NFT marketplace using React, Next.js, Solidity, and TypeScript. Supports minting, listing, and purchasing NFTs on the Ethereum blockchain.",
+    href: 'https://github.com/khoubaib-sudo/nft-marketplace', 
+  },
+  {
+    title: "Ristorante Pizzeria Schützenhof",
+    description: "A web project for a restaurant website using modern JavaScript frameworks.",
+    href: "https://github.com/khoubaib-sudo/Ristorante-Pizzeria-Sch-tzenhof",
+  },
+  {
+    title: "3D T-Shirt Shop",
+    description: "An AI-powered 3D ecommerce site using React and Three.js.",
+    href: "https://github.com/khoubaib-sudo/3D-tshirt-shop",
+  },
+  {
+    title: "Escape Tunisia",
+    description: "A game project themed around escaping Tunisia, developed with Yacc.",
+    href: "https://github.com/khoubaib-sudo/Escape-Tunisia",
+  },
+  {
+    title: "Ecommerce Frip",
+    description: "Modern e-commerce platform built with Next.js, React, and Stripe integration.",
+    href: "https://github.com/khoubaib-sudo/ecommerce_frip",
+  },
+  {
+    title: "GitHub UI Clone",
+    description: "Clone of the GitHub homepage using TypeScript and Next.js.",
+    href: "https://github.com/khoubaib-sudo/GitHub_UI_Clone",
+  },
+  {
+    title: "AutoHub",
+    description: "Car rental website built with React, Next.js 13, TypeScript, and Tailwind CSS.",
+    href: "https://github.com/khoubaib-sudo/AutoHub",
+  },
+  {
+    title: "Quoteit",
+    description: "A quote-related application created with JavaScript.",
+    href: "https://github.com/khoubaib-sudo/quoteit",
   },
 ];
 
@@ -34,7 +71,7 @@ export default function ProjectsCard() {
         <div className="w-full h-[0.9px] dark:bg-neutral-600 bg-neutral-400/60 mt-1 top-7" />
       </div>
 
-      <div className="mt-8 px-2 space-y-4 pb-4">
+      <div className="mt-8 px-2 pb-4 h-[400px] overflow-y-auto space-y-4">
         {projects.map((project, index) => (
           <ProjectItem key={index} {...project} />
         ))}
