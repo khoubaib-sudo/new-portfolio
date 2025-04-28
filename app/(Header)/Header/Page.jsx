@@ -6,6 +6,8 @@ import { useTheme } from "next-themes";
 import { CgDarkMode } from "react-icons/cg";
 import { HiMiniLanguage } from "react-icons/hi2"; // Make sure this icon is imported!
 import Image from "next/image";
+import { useTranslation } from '../../../hooks/useTranslation'
+import { useLanguage } from "@/context/LanguageContext";
 
 function HeaderPage() {
   const { theme, systemTheme, setTheme } = useTheme();
@@ -15,14 +17,10 @@ function HeaderPage() {
     setTheme(currentTheme === "dark" ? "light" : "dark");
   };
 
-  // Fake locale toggle for now
-  const [locale, setLocale] = useState("EN");
+  const { locale, toggleLanguage } = useLanguage();
 
-  const toggleLanguage = () => {
-    setLocale(locale === "EN" ? "DE" : "EN");
-    // Later: use router.push to change locale
-  };
-
+  
+  const { t } = useTranslation(locale.toLowerCase());
   return (
     <div>
       <nav className="flex justify-between items-center w-full px-4 pt-10 max-w-6xl mx-auto">
@@ -36,8 +34,8 @@ function HeaderPage() {
             alt="Profile picture"
           />
           <div>
-            <h4 className="text-xs">Khoubaieb Maamouri</h4>
-            <p className="text-[#828282] text-xs">Software Developer</p>
+            <h4 className="text-xs">{t("name")}</h4>
+            <p className="text-[#828282] text-xs">{t("job")}</p>
           </div>
         </div>
 
@@ -84,7 +82,7 @@ function HeaderPage() {
     exit={{ opacity: 0, y: 5 }}
     transition={{ duration: 0.3 }}
   >
-    {locale}
+    {locale.toUpperCase()}
   </motion.span>
 </motion.button>
 

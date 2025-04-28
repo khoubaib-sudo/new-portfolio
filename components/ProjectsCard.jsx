@@ -1,79 +1,43 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "@/hooks/useTranslation";
+import { useLanguage } from "@/context/LanguageContext";
 
-const projects = [ 
-  {
-    title: "Letaff Circle",
-    description:
-      "My end of study Project is designing and developing a learning management system using Scrum and UML, Next.js, React, Node, MongoDB, Stripe, Cloudinary, and Daily.co.",
-    href: "https://github.com/khoubaib-sudo/letaff-circle",
-  },
-  {
-    title: "Inventory Management Dashboard",
-    description:
-      "Full-stack inventory management dashboard with Next.js, Redux, Node.js, and AWS. Includes AWS services like RDS, EC2, and S3 for a scalable application.",
-    href: "https://github.com/khoubaib-sudo/inventory-management",
-  },
-  {
-    title: "Full Stack E-Commerce Website Dashboard and CMS",
-    description:
-      "Built a full-featured e-commerce platform using Next.js, React, and Tailwind CSS. Integrated Shopify Storefront API, Contentful CMS, Stripe for payments, GraphQL for efficient data querying, and TypeScript for type safety.",
-    href: 'https://github.com/khoubaib-sudo/E-Commerce-Dashboard-CMS-store-', 
-  },
-  {
-    title: "NFT Marketplace on Ethereum Blockchain",
-    description:
-      "Developed a decentralized NFT marketplace using React, Next.js, Solidity, and TypeScript. Supports minting, listing, and purchasing NFTs on the Ethereum blockchain.",
-    href: 'https://github.com/khoubaib-sudo/nft-marketplace', 
-  },
-  {
-    title: "Ristorante Pizzeria Schützenhof",
-    description: "A web project for a restaurant website using modern JavaScript frameworks.",
-    href: "https://github.com/khoubaib-sudo/Ristorante-Pizzeria-Sch-tzenhof",
-  },
-  {
-    title: "3D T-Shirt Shop",
-    description: "An AI-powered 3D ecommerce site using React and Three.js.",
-    href: "https://github.com/khoubaib-sudo/3D-tshirt-shop",
-  },
-  {
-    title: "Escape Tunisia",
-    description: "A game project themed around escaping Tunisia, developed with Yacc.",
-    href: "https://github.com/khoubaib-sudo/Escape-Tunisia",
-  },
-  {
-    title: "Ecommerce Frip",
-    description: "Modern e-commerce platform built with Next.js, React, and Stripe integration.",
-    href: "https://github.com/khoubaib-sudo/ecommerce_frip",
-  },
-  {
-    title: "GitHub UI Clone",
-    description: "Clone of the GitHub homepage using TypeScript and Next.js.",
-    href: "https://github.com/khoubaib-sudo/GitHub_UI_Clone",
-  },
-  {
-    title: "AutoHub",
-    description: "Car rental website built with React, Next.js 13, TypeScript, and Tailwind CSS.",
-    href: "https://github.com/khoubaib-sudo/AutoHub",
-  },
-  {
-    title: "Quoteit",
-    description: "A quote-related application created with JavaScript.",
-    href: "https://github.com/khoubaib-sudo/quoteit",
-  },
+const projectLinks = [ 
+  { href: "https://github.com/khoubaib-sudo/letaff-circle" },
+  { href: "https://github.com/khoubaib-sudo/inventory-management" },
+  { href: "https://github.com/khoubaib-sudo/E-Commerce-Dashboard-CMS-store-" },
+  { href: "https://github.com/khoubaib-sudo/nft-marketplace" },
+  { href: "https://github.com/khoubaib-sudo/Ristorante-Pizzeria-Sch-tzenhof" },
+  { href: "https://github.com/khoubaib-sudo/3D-tshirt-shop" },
+  { href: "https://github.com/khoubaib-sudo/Escape-Tunisia" },
+  { href: "https://github.com/khoubaib-sudo/ecommerce_frip" },
+  { href: "https://github.com/khoubaib-sudo/GitHub_UI_Clone" },
+  { href: "https://github.com/khoubaib-sudo/AutoHub" },
+  { href: "https://github.com/khoubaib-sudo/quoteit" }
 ];
 
 export default function ProjectsCard() {
+  const { locale } = useLanguage();
+  const { t } = useTranslation(locale);
+
   return (
     <div className="dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 shadow-xl rounded-lg min-h-[50px] col-span-2 row-span-2 relative">
       <div className="absolute w-full p-2 z-20">
-        <p className="text-xs">Projects</p>
+        <p className="text-xs">{t("projects_title")}</p>
         <div className="w-full h-[0.9px] dark:bg-neutral-600 bg-neutral-400/60 mt-1 top-7" />
       </div>
 
       <div className="mt-8 px-2 pb-4 h-[400px] overflow-y-auto space-y-4">
-        {projects.map((project, index) => (
-          <ProjectItem key={index} {...project} />
+        {projectLinks.map((project, index) => (
+          <ProjectItem 
+            key={index}
+            title={t(`project_${index + 1}_title`)}
+            description={t(`project_${index + 1}_description`)}
+            href={project.href}
+          />
         ))}
       </div>
     </div>

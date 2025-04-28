@@ -1,0 +1,51 @@
+{
+    "name": "Khoubaieb Maamouri",
+    "job": "Software-Entwickler",
+        "about_title": "Über",
+        "about_name": "Khoubaieb Maamouri",
+        "about_description": "Frontend-Entwickler mit Erfahrung in Next.js, Shopify und moderner Webtechnologie. Erfahren im Aufbau schneller, skalierbarer Apps mit TypeScript, GraphQL und Tailwind CSS. Kompetent in Docker, AWS, Testing (Jest, Cypress) und CI/CD. Leidenschaftlich für sauberen Code, Systemdesign und exzellente UX.",
+            "projects_title": "Projekte",
+            
+            "project_1_title": "Letaff Circle",
+            "project_1_description": "Mein Abschlussprojekt: Entwurf und Entwicklung eines Lernmanagementsystems mit Scrum und UML, Next.js, React, Node, MongoDB, Stripe, Cloudinary und Daily.co.",
+            
+            "project_2_title": "Dashboard für Inventarverwaltung",
+            "project_2_description": "Vollständiges Dashboard zur Inventarverwaltung mit Next.js, Redux, Node.js und AWS. Nutzung von AWS-Diensten wie RDS, EC2 und S3 für eine skalierbare Anwendung.",
+            
+            "project_3_title": "Full-Stack E-Commerce Dashboard und CMS",
+            "project_3_description": "Entwicklung einer umfassenden E-Commerce-Plattform mit Next.js, React und Tailwind CSS. Integration der Shopify Storefront API, Contentful CMS, Stripe-Zahlungen, GraphQL und TypeScript.",
+            
+            "project_4_title": "NFT-Marktplatz auf der Ethereum-Blockchain",
+            "project_4_description": "Dezentrale NFT-Plattform entwickelt mit React, Next.js, Solidity und TypeScript. Ermöglicht das Prägen, Listen und Kaufen von NFTs auf Ethereum.",
+            
+            "project_5_title": "Ristorante Pizzeria Schützenhof",
+            "project_5_description": "Webprojekt für eine Restaurant-Website unter Verwendung moderner JavaScript-Frameworks.",
+            
+            "project_6_title": "3D T-Shirt Shop",
+            "project_6_description": "KI-gestützter 3D-E-Commerce-Shop mit React und Three.js.",
+            
+            "project_7_title": "Escape Tunisia",
+            "project_7_description": "Spielprojekt zum Thema Flucht aus Tunesien, entwickelt mit Yacc.",
+            
+            "project_8_title": "Ecommerce Frip",
+            "project_8_description": "Moderne E-Commerce-Plattform mit Next.js, React und Stripe-Integration.",
+            
+            "project_9_title": "GitHub UI Klon",
+            "project_9_description": "Nachbau der GitHub-Homepage mit TypeScript und Next.js.",
+            
+            "project_10_title": "AutoHub",
+            "project_10_description": "Autovermietungs-Website entwickelt mit React, Next.js 13, TypeScript und Tailwind CSS.",
+            
+            "project_11_title": "Quoteit",
+            "project_11_description": "Eine Anwendung rund um Zitate, erstellt mit JavaScript.",
+            
+                "status_title": "Modus",
+                "status_description_main": "Für Projekte & Freelancing verfügbar",
+                "status_description_sub": "lasst uns zusammenarbeiten! 🦾",
+                "status_contact_me": "Kontaktiere mich"
+              }
+              
+          
+      
+  
+  
