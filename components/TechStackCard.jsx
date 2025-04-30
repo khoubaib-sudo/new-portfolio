@@ -1,3 +1,5 @@
+"use client";
+
 import {
   SiJavascript,
   SiTypescript,
@@ -8,6 +10,8 @@ import {
   SiMongodb,
   SiPrisma,
 } from "react-icons/si";
+import { useTranslation } from "@/hooks/useTranslation";
+import { useLanguage } from "@/context/LanguageContext";
 
 const techStack = [
   { name: "JavaScript", icon: <SiJavascript /> },
@@ -21,10 +25,13 @@ const techStack = [
 ];
 
 export default function TechStackCard() {
+  const { locale } = useLanguage();
+  const { t } = useTranslation(locale);
+
   return (
     <div className="dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 shadow-xl rounded-lg z-20 h-auto min-h-44 col-span-2 relative">
       <div className="absolute w-full p-2 z-20">
-        <p className="text-xs">Tech Stack</p>
+        <p className="text-xs">{t("techstack_title")}</p>
         <div className="w-full h-[0.9px] dark:bg-neutral-600 bg-neutral-400/60 mt-1 top-7" />
       </div>
 

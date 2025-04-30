@@ -1,8 +1,16 @@
+"use client";
+
 import { useRef, useEffect, useState } from "react";
 import { RiArrowDownDoubleFill } from "react-icons/ri";
+import { useLanguage } from "@/context/LanguageContext";
+import { useTranslation } from "@/hooks/useTranslation";
+
 export default function ExperienceCard() {
   const scrollRef = useRef(null);
   const [atBottom, setAtBottom] = useState(false);
+
+  const { locale } = useLanguage();
+  const { t } = useTranslation(locale);
 
   const handleScroll = () => {
     const el = scrollRef.current;
@@ -19,76 +27,77 @@ export default function ExperienceCard() {
       return () => el.removeEventListener("scroll", handleScroll);
     }
   }, []);
+
   const experienceItems = [
     {
       date: "2024 -- 2024",
-      title: "Wallando GmbH",
-      description: "Software Developer",
+      title: t("wallando_title"),
+      description: t("wallando_desc"),
     },
     {
       date: "2023 -- 2023",
-      title: "LETAFF",
-      description: "Software Developer Intern",
+      title: t("letaff_title"),
+      description: t("letaff_desc"),
     },
     {
       date: "2022 -- 2022",
-      title: "MyEasyTransfer",
-      description: "Software Developer Intern",
+      title: t("myeasytransfer_title"),
+      description: t("myeasytransfer_desc"),
     },
     {
       date: "2021 -- Present",
-      title: "Fiverr",
-      description: "Freelance 3D Modeler",
+      title: t("fiverr_title"),
+      description: t("fiverr_desc"),
     },
   ];
 
   const educationItems = [
     {
       date: "2020 -- 2023",
-      title: "TEK-UP",
-      description: "Master of Science in Software Engineering",
+      title: t("tekup_title"),
+      description: t("tekup_desc"),
     },
     {
       date: "2023",
-      title: "Hochschule Schmalkalden University",
-      description: "Exchange Student in Computer Technologies",
+      title: t("schmalkalden_title"),
+      description: t("schmalkalden_desc"),
     },
     {
       date: "2016 -- 2018",
-      title: "ISET Rades",
-      description: "Bachelor's Degree in Mechanical Engineering",
+      title: t("iset_title"),
+      description: t("iset_desc"),
     },
   ];
 
   return (
     <div className="dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 shadow-xl rounded-lg col-span-2 row-span-2 relative overflow-hidden">
       <div className="absolute w-full p-2 z-20">
-        <p className="text-xs">Experience & Education</p>
+        <p className="text-xs">{t("experience_title")}</p>
         <div className="w-full h-[0.9px] dark:bg-neutral-600 bg-neutral-400/60 mt-1 top-7" />
       </div>
 
       <div className="bg-gradient-to-b w-full absolute z-10 from-white via-white dark:from-[#1E1E1E] dark:via-[#1E1E1E] to-transparent h-20 transition-all ease-in duration-200" />
 
-      <div className="overflow-y-auto h-[340px] overflow-hidden scrollbar-hide scroll-smooth relative">
-        <div className="mt-16">
-          {experienceItems.map((item, index) => (
-            <ExperienceItem key={index} {...item} />
-          ))}
-        </div>
+      <div
+        className="overflow-y-auto h-[340px] overflow-hidden scrollbar-hide scroll-smooth relative mt-12"
+        ref={scrollRef}
+      >
+        {experienceItems.map((item, index) => (
+          <ExperienceItem key={`exp-${index}`} {...item} />
+        ))}
 
         <div className="mt-4">
           {educationItems.map((item, index) => (
-            <ExperienceItem key={index} {...item} isEducation />
+            <ExperienceItem key={`edu-${index}`} {...item} isEducation />
           ))}
         </div>
       </div>
-      {/* Scroll Hint */}
-      {!atBottom && (
-  <div className="absolute inset-x-0 bottom-4 flex justify-center z-30">
-    <RiArrowDownDoubleFill className="text-[15px] animate-bounce text-neutral-400" />
-  </div>
-)}
 
+      {!atBottom && (
+        <div className="absolute inset-x-0 bottom-4 flex justify-center z-30">
+          <RiArrowDownDoubleFill className="text-[15px] animate-bounce text-neutral-400" />
+        </div>
+      )}
     </div>
   );
 }
@@ -105,7 +114,7 @@ function ExperienceItem({ date, title, description, isEducation }) {
           {date}
         </p>
         <div>
-          <h4 className="text-xs font-bold">{title}</h4>
+          <p className="text-xs font-bold">{title}</p>
           <p className="text-[11px] text-neutral-500">{description}</p>
         </div>
       </div>

@@ -1,5 +1,10 @@
+"use client";
+
 import { useRef, useEffect, useState } from "react";
 import { RiArrowDownDoubleFill } from "react-icons/ri";
+import { useTranslation } from "@/hooks/useTranslation";
+import { useLanguage } from "@/context/LanguageContext";
+
 const certifications = [
   {
     date: "May 2023",
@@ -34,6 +39,9 @@ const certifications = [
 ];
 
 export default function CertificationsCard() {
+  const { locale } = useLanguage();
+  const { t } = useTranslation(locale);
+
   const scrollRef = useRef(null);
   const [atBottom, setAtBottom] = useState(false);
 
@@ -52,16 +60,17 @@ export default function CertificationsCard() {
       return () => el.removeEventListener("scroll", handleScroll);
     }
   }, []);
+
   return (
     <div className="dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 shadow-xl rounded-lg col-span-2 overflow-hidden relative">
       {/* Header */}
       <div className="p-2 z-10 bg-inherit">
-        <p className="text-xs">Certifications</p>
+        <p className="text-xs">{t("certifications_title")}</p>
         <div className="w-full h-[0.9px] dark:bg-neutral-600 bg-neutral-400/60 mt-1" />
       </div>
 
       {/* Scrollable Content */}
-      <div className="overflow-y-auto h-[180px] scrollbar-hide scroll-smooth mt-2 relative">
+      <div className="overflow-y-auto h-[180px] scrollbar-hide scroll-smooth mt-2 relative" ref={scrollRef}>
         <div className="pt-4 pb-6 px-1">
           {certifications.map((cert, index) => (
             <CertificationItem key={index} {...cert} />
@@ -70,15 +79,14 @@ export default function CertificationsCard() {
 
         {/* Optional bottom fade effect */}
         <div className="pointer-events-none absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-white dark:from-[#1E1E1E] to-transparent z-10" />
-      
       </div>
+
       {/* Scroll Hint */}
       {!atBottom && (
-  <div className="absolute inset-x-0 bottom-4 flex justify-center z-30">
-    <RiArrowDownDoubleFill className="text-[15px] animate-bounce text-neutral-400" />
-  </div>
-)}
-
+        <div className="absolute inset-x-0 bottom-4 flex justify-center z-30">
+          <RiArrowDownDoubleFill className="text-[15px] animate-bounce text-neutral-400" />
+        </div>
+      )}
     </div>
   );
 }

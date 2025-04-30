@@ -42,7 +42,40 @@
                 "status_title": "Modus",
                 "status_description_main": "Für Projekte & Freelancing verfügbar",
                 "status_description_sub": "lasst uns zusammenarbeiten! 🦾",
-                "status_contact_me": "Kontaktiere mich"
+                "status_contact_me": "Kontaktiere mich",
+                
+ 
+                "experience_title": "Erfahrung & Ausbildung",
+
+  "wallando_title": "Wallando GmbH",
+  "wallando_desc": "Softwareentwickler",
+
+  "letaff_title": "LETAFF",
+  "letaff_desc": "Praktikant als Softwareentwickler",
+
+  "myeasytransfer_title": "MyEasyTransfer",
+  "myeasytransfer_desc": "Praktikant als Softwareentwickler",
+
+  "fiverr_title": "Fiverr",
+  "fiverr_desc": "Freiberuflicher 3D-Modellierer",
+
+  "tekup_title": "TEK-UP",
+  "tekup_desc": "Master of Science in Softwaretechnik",
+
+  "schmalkalden_title": "Hochschule Schmalkalden",
+  "schmalkalden_desc": "Austauschstudent in Computertechnologien",
+
+  "iset_title": "ISET Rades",
+  "iset_desc": "Bachelor-Abschluss in Maschinenbau",
+  "techstack_title": "Technologie-Stack",
+  "stats_years_exp": "Jahre Erfahrung",
+"stats_cv_title": "Lebenslauf",
+"stats_cv_view": "Ansehen",
+"stats_cv_download": "Herunterladen",
+"certifications_title": "Zertifikate",
+"contact_title": "Kontakt aufnehmen",
+"latest_work_title": "Neueste Arbeit"
+
               }
               
           

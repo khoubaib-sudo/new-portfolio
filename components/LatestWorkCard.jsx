@@ -1,12 +1,19 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "@/hooks/useTranslation";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function LatestWorkCard() {
+  const { locale } = useLanguage();
+  const { t } = useTranslation(locale);
+
   return (
     <div className="dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 overflow-hidden relative shadow-xl rounded-lg min-h-[100px] col-span-2 row-span-3 md:row-span-2">
       <div className="absolute w-full p-2 z-10">
         <div className="flex justify-between items-center">
-          <p className="text-xs">Latest Work</p>
+          <p className="text-xs">{t("latest_work_title")}</p>
           <Link
             href="https://ristorante-pizzeria-sch-tzenhof.vercel.app/"
             target="_blank"

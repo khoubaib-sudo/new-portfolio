@@ -41,7 +41,36 @@
             "status_title": "Mode",
             "status_description_main": "Open for contract and freelance projects",
             "status_description_sub": "Let's work together — hit me up for a collab 🦾",
-            "status_contact_me": "Contact me"
+            "status_contact_me": "Contact me","experience_title": "Experience & Education",
+
+  "wallando_title": "Wallando GmbH",
+  "wallando_desc": "Software Developer",
+
+  "letaff_title": "LETAFF",
+  "letaff_desc": "Software Developer Intern",
+
+  "myeasytransfer_title": "MyEasyTransfer",
+  "myeasytransfer_desc": "Software Developer Intern",
+
+  "fiverr_title": "Fiverr",
+  "fiverr_desc": "Freelance 3D Modeler",
+
+  "tekup_title": "TEK-UP",
+  "tekup_desc": "Master of Science in Software Engineering",
+
+  "schmalkalden_title": "Hochschule Schmalkalden University",
+  "schmalkalden_desc": "Exchange Student in Computer Technologies",
+
+  "iset_title": "ISET Rades",
+  "iset_desc": "Bachelor's Degree in Mechanical Engineering",
+  "techstack_title": "Tech Stack",
+"stats_years_exp": "Years of Experience",
+"stats_cv_title": "CV",
+"stats_cv_view": "View",
+"stats_cv_download": "Download",
+"certifications_title": "Certifications",
+"contact_title": "Get in touch",
+"latest_work_title": "Latest Work"
                     
       
       

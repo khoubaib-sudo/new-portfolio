@@ -1,12 +1,18 @@
+"use client";
+
 import Link from "next/link";
 import { Tooltip } from "@nextui-org/react";
 import { RiLinkedinFill } from "react-icons/ri";
 import { TiSocialGithub } from "react-icons/ti";
 import { TbPhoneFilled } from "react-icons/tb";
 import { IoIosMailUnread } from "react-icons/io";
-
+import { useTranslation } from "@/hooks/useTranslation";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function ContactCard() {
+  const { locale } = useLanguage();
+  const { t } = useTranslation(locale);
+
   const contacts = [
     {
       name: "Linkedin",
@@ -29,16 +35,15 @@ export default function ContactCard() {
       href: "mailto:khoubaiebmaamouri@gmail.com",
     },
   ];
-  
 
   return (
     <div className="dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 shadow-xl rounded-lg min-h-[50px] col-span-2 relative">
       <div className="absolute w-full p-2 z-20">
-        <p className="text-xs">Get in touch</p>
+        <p className="text-xs">{t("contact_title")}</p>
         <div className="w-full h-[0.9px] dark:bg-neutral-600 bg-neutral-400/60 mt-1 top-7" />
       </div>
 
-      <div className="mt-14 mb-4 ">
+      <div className="mt-14 mb-4">
         <div className="flex justify-center gap-x-2 px-2">
           {contacts.map((contact) => (
             <Tooltip
