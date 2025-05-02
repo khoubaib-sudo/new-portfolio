@@ -14,10 +14,6 @@ const majorMono = Major_Mono_Display({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <title>Khoubaieb Maamouri | Portfolio</title>
-      </Head>
       <body>
         <Theming>
         <LanguageProvider>

@@ -4,6 +4,7 @@ import { useRef, useEffect, useState } from "react";
 import { RiArrowDownDoubleFill } from "react-icons/ri";
 import { useTranslation } from "@/hooks/useTranslation";
 import { useLanguage } from "@/context/LanguageContext";
+import { motion, AnimatePresence } from "framer-motion";
 
 const certifications = [
   {
@@ -63,9 +64,20 @@ export default function CertificationsCard() {
 
   return (
     <div className="dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 shadow-xl rounded-lg col-span-2 overflow-hidden relative">
-      {/* Header */}
+      {/* Header with animation */}
       <div className="p-2 z-10 bg-inherit">
-        <p className="text-xs">{t("certifications_title")}</p>
+        <AnimatePresence mode="wait">
+          <motion.p
+            key={`certifications_title_${locale}`}
+            initial={{ opacity: 0, y: -5 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 5 }}
+            transition={{ duration: 0.3 }}
+            className="text-xs"
+          >
+            {t("certifications_title")}
+          </motion.p>
+        </AnimatePresence>
         <div className="w-full h-[0.9px] dark:bg-neutral-600 bg-neutral-400/60 mt-1" />
       </div>
 
@@ -91,6 +103,8 @@ export default function CertificationsCard() {
   );
 }
 
+// This part doesn’t require animation because it's static data.
+// But you *could* animate it if the contents ever change.
 function CertificationItem({ date, title, description }) {
   return (
     <>

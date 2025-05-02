@@ -1,13 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import { CgDarkMode } from "react-icons/cg";
 import { HiMiniLanguage } from "react-icons/hi2"; // Make sure this icon is imported!
 import Image from "next/image";
 import { useTranslation } from '../../../hooks/useTranslation'
 import { useLanguage } from "@/context/LanguageContext";
+import { motion, AnimatePresence } from "framer-motion";
 
 function HeaderPage() {
   const { theme, systemTheme, setTheme } = useTheme();
@@ -29,13 +29,35 @@ function HeaderPage() {
           <Image
             width={40}
             height={40}
-            className="w-10 h-10 rounded-full object-cover"
+            className="w-10 h-10 rounded-100 object-cover"
             src="/KM.png"
             alt="Profile picture"
           />
           <div>
-            <h4 className="text-xs">{t("name")}</h4>
-            <p className="text-[#828282] text-xs">{t("job")}</p>
+          <AnimatePresence mode="wait">
+  <motion.h4
+    key={`name_${locale}`}
+    initial={{ opacity: 0, y: -5 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: 5 }}
+    transition={{ duration: 0.3 }}
+    className="text-xs"
+  >
+    {t("name")}
+  </motion.h4>
+</AnimatePresence>
+<AnimatePresence mode="wait">
+  <motion.p
+    key={`job_${locale}`}
+    initial={{ opacity: 0, y: -5 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: 5 }}
+    transition={{ duration: 0.3 }}
+    className="text-[#828282] text-xs"
+  >
+    {t("job")}
+  </motion.p>
+</AnimatePresence>
           </div>
         </div>
 
