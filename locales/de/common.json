@@ -1,84 +1,67 @@
 {
     "name": "Khoubaieb Maamouri",
     "job": "Software-Entwickler",
-        "about_title": "Über",
-        "about_name": "Khoubaieb Maamouri",
-        "about_description": "Frontend-Entwickler mit Erfahrung in Next.js, Shopify und moderner Webtechnologie. Erfahren im Aufbau schneller, skalierbarer Apps mit TypeScript, GraphQL und Tailwind CSS. Kompetent in Docker, AWS, Testing (Jest, Cypress) und CI/CD. Leidenschaftlich für sauberen Code, Systemdesign und exzellente UX.",
-            "projects_title": "Projekte",
-            
-            "project_1_title": "Letaff Circle",
-            "project_1_description": "Mein Abschlussprojekt: Entwurf und Entwicklung eines Lernmanagementsystems mit Scrum und UML, Next.js, React, Node, MongoDB, Stripe, Cloudinary und Daily.co.",
-            
-            "project_2_title": "Dashboard für Inventarverwaltung",
-            "project_2_description": "Vollständiges Dashboard zur Inventarverwaltung mit Next.js, Redux, Node.js und AWS. Nutzung von AWS-Diensten wie RDS, EC2 und S3 für eine skalierbare Anwendung.",
-            
-            "project_3_title": "Full-Stack E-Commerce Dashboard und CMS",
-            "project_3_description": "Entwicklung einer umfassenden E-Commerce-Plattform mit Next.js, React und Tailwind CSS. Integration der Shopify Storefront API, Contentful CMS, Stripe-Zahlungen, GraphQL und TypeScript.",
-            
-            "project_4_title": "NFT-Marktplatz auf der Ethereum-Blockchain",
-            "project_4_description": "Dezentrale NFT-Plattform entwickelt mit React, Next.js, Solidity und TypeScript. Ermöglicht das Prägen, Listen und Kaufen von NFTs auf Ethereum.",
-            
-            "project_5_title": "Ristorante Pizzeria Schützenhof",
-            "project_5_description": "Webprojekt für eine Restaurant-Website unter Verwendung moderner JavaScript-Frameworks.",
-            
-            "project_6_title": "3D T-Shirt Shop",
-            "project_6_description": "KI-gestützter 3D-E-Commerce-Shop mit React und Three.js.",
-            
-            "project_7_title": "Escape Tunisia",
-            "project_7_description": "Spielprojekt zum Thema Flucht aus Tunesien, entwickelt mit Yacc.",
-            
-            "project_8_title": "Ecommerce Frip",
-            "project_8_description": "Moderne E-Commerce-Plattform mit Next.js, React und Stripe-Integration.",
-            
-            "project_9_title": "GitHub UI Klon",
-            "project_9_description": "Nachbau der GitHub-Homepage mit TypeScript und Next.js.",
-            
-            "project_10_title": "AutoHub",
-            "project_10_description": "Autovermietungs-Website entwickelt mit React, Next.js 13, TypeScript und Tailwind CSS.",
-            
-            "project_11_title": "Quoteit",
-            "project_11_description": "Eine Anwendung rund um Zitate, erstellt mit JavaScript.",
-            
-                "status_title": "Modus",
-                "status_description_main": "Für Projekte & Freelancing verfügbar",
-                "status_description_sub": "lasst uns zusammenarbeiten! 🦾",
-                "status_contact_me": "Kontaktiere mich",
-                
- 
-                "experience_title": "Erfahrung & Ausbildung",
-
-  "wallando_title": "Wallando GmbH",
-  "wallando_desc": "Softwareentwickler",
-
-  "letaff_title": "LETAFF",
-  "letaff_desc": "Praktikant als Softwareentwickler",
-
-  "myeasytransfer_title": "MyEasyTransfer",
-  "myeasytransfer_desc": "Praktikant als Softwareentwickler",
-
-  "fiverr_title": "Fiverr",
-  "fiverr_desc": "Freiberuflicher 3D-Modellierer",
-
-  "tekup_title": "TEK-UP",
-  "tekup_desc": "Master of Science in Softwaretechnik",
-
-  "schmalkalden_title": "Hochschule Schmalkalden",
-  "schmalkalden_desc": "Austauschstudent in Computertechnologien",
-
-  "iset_title": "ISET Rades",
-  "iset_desc": "Bachelor-Abschluss in Maschinenbau",
-  "techstack_title": "Technologie-Stack",
-  "stats_years_exp": "Jahre Erfahrung",
-"stats_cv_title": "Lebenslauf",
-"stats_cv_view": "Ansehen",
-"stats_cv_download": "Herunterladen",
-"certifications_title": "Zertifikate",
-"contact_title": "Kontakt aufnehmen",
-"latest_work_title": "Neueste Arbeit"
-
-              }
-              
-          
-      
-  
-  
+    "about_title": "Über",
+    "about_name": "Khoubaieb Maamouri",
+    "about_description": "Frontend-Entwickler mit Erfahrung in Next.js, Shopify und moderner Webtechnologie. Erfahren im Aufbau schneller, skalierbarer Apps mit TypeScript, GraphQL und Tailwind CSS. Kompetent in Docker, AWS, Testing (Jest, Cypress) und CI/CD. Leidenschaftlich für sauberen Code, Systemdesign und exzellente UX.",
+    "projects_title": "Projekte",
+    "project_1_title": "Letaff Circle",
+    "project_1_description": "Mein Abschlussprojekt: Entwurf und Entwicklung eines Lernmanagementsystems mit Scrum und UML, Next.js, React, Node, MongoDB, Stripe, Cloudinary und Daily.co.",
+    "project_2_title": "Dashboard für Inventarverwaltung",
+    "project_2_description": "Vollständiges Dashboard zur Inventarverwaltung mit Next.js, Redux, Node.js und AWS. Nutzung von AWS-Diensten wie RDS, EC2 und S3 für eine skalierbare Anwendung.",
+    "project_3_title": "Full-Stack E-Commerce Dashboard und CMS",
+    "project_3_description": "Entwicklung einer umfassenden E-Commerce-Plattform mit Next.js, React und Tailwind CSS. Integration der Shopify Storefront API, Contentful CMS, Stripe-Zahlungen, GraphQL und TypeScript.",
+    "project_4_title": "NFT-Marktplatz auf der Ethereum-Blockchain",
+    "project_4_description": "Dezentrale NFT-Plattform entwickelt mit React, Next.js, Solidity und TypeScript. Ermöglicht das Prägen, Listen und Kaufen von NFTs auf Ethereum.",
+    "project_5_title": "Ristorante Pizzeria Schützenhof",
+    "project_5_description": "Webprojekt für eine Restaurant-Website unter Verwendung moderner JavaScript-Frameworks.",
+    "project_6_title": "3D T-Shirt Shop",
+    "project_6_description": "KI-gestützter 3D-E-Commerce-Shop mit React und Three.js.",
+    "project_7_title": "Escape Tunisia",
+    "project_7_description": "Spielprojekt zum Thema Flucht aus Tunesien, entwickelt mit Yacc.",
+    "project_8_title": "Ecommerce Frip",
+    "project_8_description": "Moderne E-Commerce-Plattform mit Next.js, React und Stripe-Integration.",
+    "project_9_title": "GitHub UI Klon",
+    "project_9_description": "Nachbau der GitHub-Homepage mit TypeScript und Next.js.",
+    "project_10_title": "AutoHub",
+    "project_10_description": "Autovermietungs-Website entwickelt mit React, Next.js 13, TypeScript und Tailwind CSS.",
+    "project_11_title": "Quoteit",
+    "project_11_description": "Eine Anwendung rund um Zitate, erstellt mit JavaScript.",
+    "status_title": "Modus",
+    "status_description_main": "Für Projekte & Freelancing verfügbar",
+    "status_description_sub": "lasst uns zusammenarbeiten! 🦾",
+    "status_contact_me": "Kontaktiere mich",
+    "experience_title": "Erfahrung & Ausbildung",
+    "wallando_title": "Wallando GmbH",
+    "wallando_desc": "Softwareentwickler",
+    "letaff_title": "LETAFF",
+    "letaff_desc": "Praktikant als Softwareentwickler",
+    "myeasytransfer_title": "MyEasyTransfer",
+    "myeasytransfer_desc": "Praktikant als Softwareentwickler",
+    "fiverr_title": "Fiverr",
+    "fiverr_desc": "Freiberuflicher 3D-Modellierer",
+    "tekup_title": "TEK-UP",
+    "tekup_desc": "Master of Science in Softwaretechnik",
+    "schmalkalden_title": "Hochschule Schmalkalden",
+    "schmalkalden_desc": "Austauschstudent in Computertechnologien",
+    "iset_title": "ISET Rades",
+    "iset_desc": "Bachelor-Abschluss in Maschinenbau",
+    "techstack_title": "Technologie-Stack",
+    "stats_years_exp": "Jahre Erfahrung",
+    "stats_cv_title": "Lebenslauf",
+    "stats_cv_view": "Ansehen",
+    "stats_cv_download": "Herunterladen",
+    "certifications_title": "Zertifikate",
+    "contact_title": "Kontakt aufnehmen",
+    "latest_work_title": "Neueste Arbeit",
+    "languages_title": "Sprachen, die ich spreche",
+    "language_english_name": "Englisch",
+    "language_english_level": "Fortgeschritten (C1)",
+    "language_english_extra": "ONSET Ergebnis: 101 Punkte",
+    "language_french_name": "Französisch",
+    "language_french_level": "Fortgeschritten",
+    "language_french_extra": "Zweitsprache",
+    "language_german_name": "Deutsch",
+    "language_german_level": "A2",
+    "language_german_extra": "ÖSD-Zertifikat"
+  }

@@ -28,11 +28,12 @@ function Homepage() {
         <AboutCard />
         <ExperienceCard />
         <ProjectsCard />
-        <ContactCard />
         <LatestWorkCard />
         <CertificationsCard />
         <TechStackCard />
         <StatsCard />
+        
+        <ContactCard />
       </div>
     </div>
     </>

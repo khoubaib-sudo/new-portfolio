@@ -40,20 +40,21 @@ export default function AboutCard() {
         <div className="w-full h-[0.9px] dark:bg-neutral-600 bg-neutral-400/60 mt-1 top-7" />
       </div>
 
-      <div className="mt-10 px-3 pb-3">
-        <AnimatePresence mode="wait">
-          <motion.p
-            key={`about_description_${locale}`}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.3 }}
-            className="text-xs font-semibold leading-5"
-          >
-            {t("about_description")}
-          </motion.p>
-        </AnimatePresence>
-      </div>
+      <div className="mt-10 px-3 pb-0">
+  <AnimatePresence mode="wait">
+    <motion.p
+      key={`about_description_${locale}`}
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
+      transition={{ duration: 0.3 }}
+      className="text-xs font-semibold leading-5 mb-0"
+    >
+      {t("about_description")}
+    </motion.p>
+  </AnimatePresence>
+</div>
+
     </motion.div>
   );
 }

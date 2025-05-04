@@ -76,10 +76,10 @@ export default function ExperienceCard() {
         <div className="w-full h-[0.9px] dark:bg-neutral-600 bg-neutral-400/60 mt-1 top-7" />
       </div>
 
-      <div className="bg-gradient-to-b w-full absolute z-10 from-white via-white dark:from-[#1E1E1E] dark:via-[#1E1E1E] to-transparent h-20 transition-all ease-in duration-200" />
+     
 
       <div
-        className="overflow-y-auto h-[340px] overflow-hidden scrollbar-hide scroll-smooth relative mt-12"
+        className="overflow-y-auto h-[400px] overflow-hidden scrollbar-hide scroll-smooth relative mt-12"
         ref={scrollRef}
       >
         {experienceItems.map((item, index) => (
@@ -92,12 +92,6 @@ export default function ExperienceCard() {
           ))}
         </div>
       </div>
-
-      {!atBottom && (
-        <div className="absolute inset-x-0 bottom-4 flex justify-center z-30">
-          <RiArrowDownDoubleFill className="text-[15px] animate-bounce text-neutral-400" />
-        </div>
-      )}
     </div>
   );
 }

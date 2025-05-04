@@ -30,7 +30,7 @@ export default function ProjectsCard() {
         <div className="w-full h-[0.9px] dark:bg-neutral-600 bg-neutral-400/60 mt-1 top-7" />
       </div>
 
-      <div className="mt-8 px-2 pb-4 h-[400px] overflow-y-auto space-y-4">
+      <div className="mt-8 px-2 pb-4 h-[500px] overflow-y-auto space-y-4">
         {projectLinks.map((project, index) => (
           <ProjectItem 
             key={index}

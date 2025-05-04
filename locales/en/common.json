@@ -1,78 +1,67 @@
 {
-    "name": "Khoubaieb Maamouri",
-    "job": "Software Developer",
-    "about_title": "About",
-    "about_name": "Khoubaieb Maamouri",
-    "about_description": "Frontend developer skilled in Next.js, Shopify, and modern web tech. Experienced in building fast, scalable apps with TypeScript, GraphQL, and Tailwind CSS. Proficient in Docker, AWS, testing (Jest, Cypress), and CI/CD. Passionate about clean code, system design, and great UX.",
-        "projects_title": "Projects",
-        "project_1_title": "Letaff Circle",
-        "project_1_description": "My end of study Project is designing and developing a learning management system using Scrum and UML, Next.js, React, Node, MongoDB, Stripe, Cloudinary, and Daily.co.",
-        
-        "project_2_title": "Inventory Management Dashboard",
-        "project_2_description": "Full-stack inventory management dashboard with Next.js, Redux, Node.js, and AWS. Includes AWS services like RDS, EC2, and S3 for a scalable application.",
-        
-        "project_3_title": "Full Stack E-Commerce Website Dashboard and CMS",
-        "project_3_description": "Built a full-featured e-commerce platform using Next.js, React, and Tailwind CSS. Integrated Shopify Storefront API, Contentful CMS, Stripe for payments, GraphQL for efficient data querying, and TypeScript for type safety.",
-      
-        "project_4_title": "NFT Marketplace on Ethereum Blockchain",
-        "project_4_description": "Developed a decentralized NFT marketplace using React, Next.js, Solidity, and TypeScript. Supports minting, listing, and purchasing NFTs on the Ethereum blockchain.",
-        
-        "project_5_title": "Ristorante Pizzeria Schützenhof",
-        "project_5_description": "A web project for a restaurant website using modern JavaScript frameworks.",
-        
-        "project_6_title": "3D T-Shirt Shop",
-        "project_6_description": "An AI-powered 3D ecommerce site using React and Three.js.",
-        
-        "project_7_title": "Escape Tunisia",
-        "project_7_description": "A game project themed around escaping Tunisia, developed with Yacc.",
-        
-        "project_8_title": "Ecommerce Frip",
-        "project_8_description": "Modern e-commerce platform built with Next.js, React, and Stripe integration.",
-        
-        "project_9_title": "GitHub UI Clone",
-        "project_9_description": "Clone of the GitHub homepage using TypeScript and Next.js.",
-        
-        "project_10_title": "AutoHub",
-        "project_10_description": "Car rental website built with React, Next.js 13, TypeScript, and Tailwind CSS.",
-        
-        "project_11_title": "Quoteit",
-        "project_11_description": "A quote-related application created with JavaScript.",
-        
-            "status_title": "Mode",
-            "status_description_main": "Open for contract and freelance projects",
-            "status_description_sub": "Let's work together — hit me up for a collab 🦾",
-            "status_contact_me": "Contact me","experience_title": "Experience & Education",
-
+  "name": "Khoubaieb Maamouri",
+  "job": "Software Developer",
+  "about_title": "About",
+  "about_name": "Khoubaieb Maamouri",
+  "about_description": "Frontend developer skilled in Next.js, Shopify, and modern web tech. Experienced in building fast, scalable apps with TypeScript, GraphQL, and Tailwind CSS. Proficient in Docker, AWS, testing (Jest, Cypress), and CI/CD. Passionate about clean code, system design, and great UX.",
+  "projects_title": "Projects",
+  "project_1_title": "Letaff Circle",
+  "project_1_description": "My end of study Project is designing and developing a learning management system using Scrum and UML, Next.js, React, Node, MongoDB, Stripe, Cloudinary, and Daily.co.",
+  "project_2_title": "Inventory Management Dashboard",
+  "project_2_description": "Full-stack inventory management dashboard with Next.js, Redux, Node.js, and AWS. Includes AWS services like RDS, EC2, and S3 for a scalable application.",
+  "project_3_title": "Full Stack E-Commerce Website Dashboard and CMS",
+  "project_3_description": "Built a full-featured e-commerce platform using Next.js, React, and Tailwind CSS. Integrated Shopify Storefront API, Contentful CMS, Stripe for payments, GraphQL for efficient data querying, and TypeScript for type safety.",
+  "project_4_title": "NFT Marketplace on Ethereum Blockchain",
+  "project_4_description": "Developed a decentralized NFT marketplace using React, Next.js, Solidity, and TypeScript. Supports minting, listing, and purchasing NFTs on the Ethereum blockchain.",
+  "project_5_title": "Ristorante Pizzeria Schützenhof",
+  "project_5_description": "A web project for a restaurant website using modern JavaScript frameworks.",
+  "project_6_title": "3D T-Shirt Shop",
+  "project_6_description": "An AI-powered 3D ecommerce site using React and Three.js.",
+  "project_7_title": "Escape Tunisia",
+  "project_7_description": "A game project themed around escaping Tunisia, developed with Yacc.",
+  "project_8_title": "Ecommerce Frip",
+  "project_8_description": "Modern e-commerce platform built with Next.js, React, and Stripe integration.",
+  "project_9_title": "GitHub UI Clone",
+  "project_9_description": "Clone of the GitHub homepage using TypeScript and Next.js.",
+  "project_10_title": "AutoHub",
+  "project_10_description": "Car rental website built with React, Next.js 13, TypeScript, and Tailwind CSS.",
+  "project_11_title": "Quoteit",
+  "project_11_description": "A quote-related application created with JavaScript.",
+  "status_title": "Mode",
+  "status_description_main": "Open for contract and freelance projects",
+  "status_description_sub": "Let's work together — hit me up for a collab 🦾",
+  "status_contact_me": "Contact me",
+  "experience_title": "Experience & Education",
   "wallando_title": "Wallando GmbH",
   "wallando_desc": "Software Developer",
-
   "letaff_title": "LETAFF",
   "letaff_desc": "Software Developer Intern",
-
   "myeasytransfer_title": "MyEasyTransfer",
   "myeasytransfer_desc": "Software Developer Intern",
-
   "fiverr_title": "Fiverr",
   "fiverr_desc": "Freelance 3D Modeler",
-
   "tekup_title": "TEK-UP",
   "tekup_desc": "Master of Science in Software Engineering",
-
   "schmalkalden_title": "Hochschule Schmalkalden University",
   "schmalkalden_desc": "Exchange Student in Computer Technologies",
-
   "iset_title": "ISET Rades",
   "iset_desc": "Bachelor's Degree in Mechanical Engineering",
   "techstack_title": "Tech Stack",
-"stats_years_exp": "Years of Experience",
-"stats_cv_title": "CV",
-"stats_cv_view": "View",
-"stats_cv_download": "Download",
-"certifications_title": "Certifications",
-"contact_title": "Get in touch",
-"latest_work_title": "Latest Work"
-                    
-      
-      
-  }
-  
+  "stats_years_exp": "Years of Experience",
+  "stats_cv_title": "CV",
+  "stats_cv_view": "View",
+  "stats_cv_download": "Download",
+  "certifications_title": "Certifications",
+  "contact_title": "Get in touch",
+  "latest_work_title": "Latest Work",
+  "languages_title": "Languages I Speak",
+  "language_english_name": "English",
+  "language_english_level": "Advanced (C1)",
+  "language_english_extra": "ONSET Score: 101 points",
+  "language_french_name": "French",
+  "language_french_level": "Advanced",
+  "language_french_extra": "Second language",
+  "language_german_name": "German",
+  "language_german_level": "A2",
+  "language_german_extra": "ÖSD certificate"
+}
