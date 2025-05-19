@@ -2,14 +2,10 @@ import "./globals.css";
 import Theming from "@/components/providers/Theme";
 import HeaderPage from "./(Header)/Header/Page";
 import Footer from "./components/Footer";
-import { Major_Mono_Display } from "next/font/google";
 import { LanguageProvider } from "@/context/LanguageContext";
 import Loader from "@/components/Loader";
 
-const majorMono = Major_Mono_Display({
-  subsets: ["latin"],
-  weight: "400",
-});
+
 
 export default function RootLayout({ children }) {
   return (
@@ -71,7 +67,7 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className={majorMono.className}>
+      <body >
         <Loader />
         <Theming>
           <LanguageProvider>
