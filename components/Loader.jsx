@@ -10,8 +10,8 @@ export default function Loader() {
     const handleLoad = () => {
       setTimeout(() => {
         setIsExiting(true);
-        setTimeout(() => setIsVisible(false), 500);
-      }, 600); // simulate load
+        setTimeout(() => setIsVisible(false), 1000);
+      }, 2500); // simulate load
     };
 
     if (document.readyState === "complete") {
@@ -27,7 +27,7 @@ export default function Loader() {
 
   return (
     <div
-      className={`fixed inset-0 z-50 flex items-center justify-center bg-[#161616] transition-opacity duration-600 ${
+      className={`fixed inset-0 z-50 flex items-center justify-center bg-[#161616] transition-opacity duration-1000 ${
         isExiting ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
@@ -39,7 +39,7 @@ export default function Loader() {
           width={120}
           height={120}
           priority
-          className={`transition-opacity duration-500 ${
+          className={`transition-opacity duration-1000 ${
             isExiting ? "opacity-0" : "opacity-100"
           }`}
         />
