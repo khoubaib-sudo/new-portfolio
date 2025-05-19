@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Head from "next/head";
 import { Major_Mono_Display } from "next/font/google";
 import { LanguageProvider } from "@/context/LanguageContext";
+import Loader from "@/components/Loader"; 
 
 const majorMono = Major_Mono_Display({
   subsets: ["latin"],
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+      <Loader />
         <Theming>
         <LanguageProvider>
           <HeaderPage />

@@ -1,7 +1,5 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
-import { useTheme } from "next-themes";
 import LocationCard from "../components/LocationCard";
 import StatusCard from "../components/StatusCard";
 import AboutCard from "../components/AboutCard";
@@ -32,7 +30,6 @@ function Homepage() {
         <CertificationsCard />
         <TechStackCard />
         <StatsCard />
-        
         <ContactCard />
       </div>
     </div>
