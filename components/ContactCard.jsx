@@ -2,10 +2,6 @@
 
 import Link from "next/link";
 import { Tooltip } from "@nextui-org/react";
-import { RiLinkedinFill } from "react-icons/ri";
-import { TiSocialGithub } from "react-icons/ti";
-import { TbPhoneFilled } from "react-icons/tb";
-import { IoIosMailUnread } from "react-icons/io";
 import { useTranslation } from "@/hooks/useTranslation";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -16,23 +12,27 @@ export default function ContactCard() {
   const contacts = [
     {
       name: "Linkedin",
-      icon: <RiLinkedinFill className="text-4xl" />,
+      icon: "/linkedin.png",
       href: "https://www.linkedin.com/in/khoubaib-maamouri/",
+      style: "rotate-[5deg] w-[5.0rem] h-[5.0rem]-mt-1",
     },
     {
       name: "GitHub",
-      icon: <TiSocialGithub className="text-5xl" />,
+      icon: "/github.png",
       href: "https://github.com/khoubaib-sudo",
+      style: "-rotate-[6deg] w-[5.5rem] h-[5.5rem]-mt-1",
     },
     {
       name: "Call me",
-      icon: <TbPhoneFilled className="text-4xl" />,
+      icon: "/phone.png",
       href: "tel:+49 176 35783326",
+      style: "rotate-[8deg] w-[5.5rem] h-[5.5rem] -mb-4",
     },
     {
       name: "E-mail",
-      icon: <IoIosMailUnread className="text-4xl" />,
+      icon: "/email.png",
       href: "mailto:khoubaiebmaamouri@gmail.com",
+      style: "-rotate-[4deg] w-[5.5rem] h-[5.5rem] mt-1",
     },
   ];
 
@@ -44,7 +44,7 @@ export default function ContactCard() {
       </div>
 
       <div className="mt-14 mb-4">
-        <div className="flex justify-center gap-x-2 px-2">
+        <div className="flex justify-center  px-2 flex-wrap">
           {contacts.map((contact) => (
             <Tooltip
               key={contact.name}
@@ -54,9 +54,13 @@ export default function ContactCard() {
             >
               <Link
                 href={contact.href}
-                className="rounded-full border dark:border-neutral-600 cursor-pointer border-neutral-400/60 p-2 w-16 h-16 flex items-center justify-center transition-transform duration-200 hover:scale-110"
+                className="transition-transform duration-200 hover:scale-110"
               >
-                {contact.icon}
+                <img
+                  src={contact.icon}
+                  alt={contact.name}
+                  className={`object-contain ${contact.style} drop-shadow-lg`}
+                />
               </Link>
             </Tooltip>
           ))}
