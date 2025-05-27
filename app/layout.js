@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="de">
       <head>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Khoubaieb Maamouri | Junior Frontend Entwickler in Darmstadt</title>
         <meta
@@ -67,7 +67,7 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body >
+      <body className="cursor-none">
         <Loader />
         <Theming>
           <LanguageProvider>

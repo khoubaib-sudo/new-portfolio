@@ -11,6 +11,7 @@ import CertificationsCard from "../components/CertificationsCard";
 import TechStackCard from "../components/TechStackCard";
 import StatsCard from "../components/StatsCard";
 import Head from "next/head";
+import CursifyCursor from '../components/CursifyCursor';
 function Homepage() {
   return (
     <>
@@ -19,7 +20,7 @@ function Homepage() {
         <title>Khoubaieb Maamouri | Portfolio</title>
       </Head>
 
-    <div className="w-full px-4 pt-8 max-w-6xl mx-auto">
+    <div className="w-full px-4 pt-8 max-w-6xl mx-auto ">
     <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 auto-rows-[minmax(160px,auto)]">
         <LocationCard />
         <StatusCard />
@@ -31,6 +32,7 @@ function Homepage() {
         <TechStackCard />
         <StatsCard />
         <ContactCard />
+        <CursifyCursor />
       </div>
     </div>
     </>

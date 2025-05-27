@@ -39,6 +39,12 @@ body {
     animation-delay: 19s;
   }
 }
+html, body, * {
+  cursor: none !important;
+  -webkit-tap-highlight-color: transparent; /* prevents tap highlight */
+  user-select: none;                        /* optional: prevent text selection */
+  touch-action: manipulation;              /* optional: prevent long press */
+}
 
 /* .menu a {
   position: relative;
