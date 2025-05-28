@@ -1,38 +1,36 @@
-// components/CursifyCursor.js
 'use client';
-import { useEffect, useRef, useState } from 'react';
-import { cn , isTouchDevice } from '../app/utils'; 
+import { useEffect, useRef } from 'react';
+import { cn, isTouchDevice } from '../app/utils';
 
 export default function CursifyCursor() {
-  const [mouse, setMouse] = useState({ x: 0, y: 0 });
   const dotRef = useRef(null);
+  const mouseRef = useRef({ x: 0, y: 0 });
   const position = useRef({ x: 0, y: 0 });
   const animationRef = useRef(null);
 
   useEffect(() => {
+    if (typeof window !== 'undefined' && isTouchDevice()) return;
+
     const handleMouseMove = (e) => {
-      setMouse({ x: e.clientX, y: e.clientY });
+      mouseRef.current = { x: e.clientX, y: e.clientY };
     };
 
-    document.addEventListener('mousemove', handleMouseMove);
-
     const animate = () => {
-      const dx = mouse.x - position.current.x;
-      const dy = mouse.y - position.current.y;
+      const dx = mouseRef.current.x - position.current.x;
+      const dy = mouseRef.current.y - position.current.y;
       position.current.x += dx * 0.2;
       position.current.y += dy * 0.2;
 
       if (dotRef.current) {
-        dotRef.current.style.left = `${position.current.x}px`;
-        dotRef.current.style.top = `${position.current.y}px`;
+        dotRef.current.style.transform = `translate3d(${position.current.x}px, ${position.current.y}px, 0)`;
       }
 
       animationRef.current = requestAnimationFrame(animate);
     };
 
+    document.addEventListener('mousemove', handleMouseMove);
     animationRef.current = requestAnimationFrame(animate);
 
-    // Handle hover scale
     const interactiveElements = document.querySelectorAll(
       'a, button, input, textarea, select'
     );
@@ -56,7 +54,6 @@ export default function CursifyCursor() {
       el.addEventListener('mouseleave', handleLeave);
     });
 
-    if (typeof window !== 'undefined' && isTouchDevice()) return null;
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
       cancelAnimationFrame(animationRef.current);
@@ -65,7 +62,7 @@ export default function CursifyCursor() {
         el.removeEventListener('mouseleave', handleLeave);
       });
     };
-  }, [mouse]);
+  }, []);
 
   return (
     <div className="pointer-events-none fixed inset-0 z-50">
