@@ -26,7 +26,7 @@ export default function StatsCard() {
         </div>
         <div className="mt-10 w-full flex justify-center items-center">
           <h1 className={`text-8xl tracking-wider dark:text-white text-black ${majorMono.className}`}>
-            3
+            2
           </h1>
         </div>
       </div>
