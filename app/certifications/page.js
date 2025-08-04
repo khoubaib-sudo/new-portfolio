@@ -176,40 +176,40 @@ export default function CertificationsPage() {
         <h1 className="text-2xl font-bold mb-4">Zertifikate</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {certifications.map((cert, index) => (
-            <div className="relative rounded-lg overflow-hidden">
-  {/* Certificate Image */}
-  <Image
-    src={cert.image}
-    alt={cert.title}
-    width={400}
-    height={240}
-    className="w-full h-48 object-cover"
-  />
+  <div key={index} className="relative rounded-lg overflow-hidden">
+    {/* Certificate Image */}
+    <Image
+      src={cert.image}
+      alt={cert.title}
+      width={400}
+      height={240}
+      className="w-full h-48 object-cover"
+    />
 
-  {/* Full overlay covering entire image */}
-  <div className="absolute inset-0 bg-black/70 flex flex-col justify-between p-4 text-white">
-    <div>
-      <h3 className="text-lg font-semibold">{cert.title}</h3>
-      <p className="text-sm">{cert.description}</p>
-      <p className="mt-1 text-xs italic">
-        {cert.issuer} – {cert.date}
-      </p>
+    {/* Full overlay covering entire image */}
+    <div className="absolute inset-0 bg-black/70 flex flex-col justify-between p-4 text-white">
+      <div>
+        <h3 className="text-lg font-semibold">{cert.title}</h3>
+        <p className="text-sm">{cert.description}</p>
+        <p className="mt-1 text-xs italic">
+          {cert.issuer} – {cert.date}
+        </p>
+      </div>
+
+      {cert.link && (
+        <a
+          href={cert.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs px-3 py-2 rounded-full border border-neutral-600 dark:hover:bg-neutral-800 transition-colors"
+        >
+          Verifizieren
+        </a>
+      )}
     </div>
-
-    {cert.link && (
-      <a
-        href={cert.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-xs px-3 py-2 rounded-full border border-neutral-600  dark:hover:bg-neutral-800 transition-colors"
-      >
-        Verifizieren
-      </a>
-    )}
   </div>
-</div>
+))}
 
-          ))}
         </div>
       </div>
       <CursifyCursor />
