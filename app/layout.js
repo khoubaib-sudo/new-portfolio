@@ -5,8 +5,11 @@ import Footer from "./components/Footer";
 import { LanguageProvider } from "@/context/LanguageContext";
 import Loader from "@/components/Loader";
 
-
-
+/**
+ * RootLayout wraps all pages with common providers and global metadata.
+ * Meta tags have been enhanced for better SEO: we've added author and robots
+ * directives, expanded keyword coverage and included an OG/Twitter image.
+ */
 export default function RootLayout({ children }) {
   return (
     <html lang="de">
@@ -20,38 +23,50 @@ export default function RootLayout({ children }) {
         />
         <meta
           name="keywords"
-          content="Frontend Entwickler Darmstadt, Junior Developer Hessen"
+          content="Frontend Entwickler Darmstadt, Junior Developer Hessen, Next.js, React, TypeScript, Tailwind CSS"
         />
+        <meta name="author" content="Khoubaieb Maamouri" />
+        <meta name="robots" content="index,follow" />
         <link rel="canonical" href="https://www.khoubaiebmaamouri.website" />
         <meta property="og:title" content="Khoubaieb Maamouri | Junior Frontend Entwickler in Darmstadt" />
-        <meta property="og:description" content="Portfolio eines Junior Frontend Entwicklers aus Hessen, spezialisiert auf React und Next.js." />
+        <meta
+          property="og:description"
+          content="Portfolio eines Junior Frontend Entwicklers aus Hessen, spezialisiert auf React und Next.js."
+        />
         <meta property="og:url" content="https://www.khoubaiebmaamouri.website" />
         <meta property="og:type" content="website" />
+        {/* Provide a default preview image for social sharing */}
+        <meta property="og:image" content="/KM.png" />
         <meta property="og:locale" content="de_DE" />
         <meta property="og:site_name" content="Khoubaieb Maamouri Portfolio" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Khoubaieb Maamouri | Junior Frontend Entwickler in Darmstadt" />
-        <meta name="twitter:description" content="Portfolio für React, JavaScript und TypeScript Projekte in Deutschland" />
+        <meta
+          name="twitter:description"
+          content="Portfolio für React, JavaScript und TypeScript Projekte in Deutschland"
+        />
+        <meta name="twitter:image" content="/KM.png" />
+        {/* Structured data for rich snippets */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              "name": "Khoubaieb Maamouri",
-              "jobTitle": "Junior Frontend Entwickler",
-              "url": "https://www.khoubaiebmaamouri.website",
-              "address": {
+              name: "Khoubaieb Maamouri",
+              jobTitle: "Junior Frontend Entwickler",
+              url: "https://www.khoubaiebmaamouri.website",
+              address: {
                 "@type": "PostalAddress",
-                "addressLocality": "Darmstadt",
-                "addressRegion": "Hessen",
-                "addressCountry": "DE",
+                addressLocality: "Darmstadt",
+                addressRegion: "Hessen",
+                addressCountry: "DE",
               },
-              "sameAs": [
+              sameAs: [
                 "https://github.com/khoubaib-sudo",
                 "https://www.linkedin.com/in/khoubaib-maamouri/",
               ],
-              "knowsAbout": [
+              knowsAbout: [
                 "Next.js",
                 "React",
                 "TypeScript",
