@@ -62,7 +62,7 @@ const projects = [
   {
     title: "3D T‑Shirt Shop",
     description: "Interactive 3D t‑shirt customiser and shop.",
-    image: "/githublogo.jpg",
+    image: "/3D Tshirt.png",
     codeLink: "https://github.com/khoubaib-sudo/3D-tshirt-shop",
     liveLink: null,
     tech: ["Next.js", "Three.js", "Tailwind"],
@@ -70,7 +70,7 @@ const projects = [
   {
     title: "Escape Tunisia",
     description: "Tourism discovery platform for Tunisia.",
-    image: "/githublogo.jpg",
+    image: "/escape_tunisia.jpg",
     codeLink: "https://github.com/khoubaib-sudo/Escape-Tunisia",
     liveLink: null,
     tech: ["Next.js", "React"] ,
@@ -78,7 +78,7 @@ const projects = [
   {
     title: "E‑Commerce Frip",
     description: "Online marketplace for second‑hand clothing.",
-    image: "/githublogo.jpg",
+    image: "/fripop.png",
     codeLink: "https://github.com/khoubaib-sudo/ecommerce_frip",
     liveLink: null,
     tech: ["Next.js", "React"] ,
@@ -86,7 +86,7 @@ const projects = [
   {
     title: "GitHub UI Clone",
     description: "A clone of GitHub's user interface built with React.",
-    image: "/githublogo.jpg",
+    image: "/github_ui.png",
     codeLink: "https://github.com/khoubaib-sudo/GitHub_UI_Clone",
     liveLink: null,
     tech: ["React", "CSS"] ,
@@ -94,7 +94,7 @@ const projects = [
   {
     title: "AutoHub",
     description: "Automotive management platform.",
-    image: "/githublogo.jpg",
+    image: "/autohub1.png",
     codeLink: "https://github.com/khoubaib-sudo/AutoHub",
     liveLink: null,
     tech: ["Next.js", "React", "Tailwind"] ,
@@ -102,7 +102,7 @@ const projects = [
   {
     title: "QuoteIt",
     description: "An app to generate and share inspirational quotes.",
-    image: "/githublogo.jpg",
+    image: "/quoteit-fiv.png",
     codeLink: "https://github.com/khoubaib-sudo/quoteit",
     liveLink: null,
     tech: ["Next.js", "React"] ,
@@ -133,8 +133,7 @@ export default function ProjectsPage() {
         <div className="card__content">
           <div>
             <h3 className="card__heading">{project.title}</h3>
-            <p className="card__category">{project.description}</p>
-            
+            <p className="card__tech">{project.description}</p>
           </div>
           <p className="card__tech">Technologien: {project.tech.join(", ")}</p>
         </div>
