@@ -5,89 +5,65 @@ import Footer from "./components/Footer";
 import { LanguageProvider } from "@/context/LanguageContext";
 import Loader from "@/components/Loader";
 
-/**
- * RootLayout wraps all pages with common providers and global metadata.
- * Meta tags have been enhanced for better SEO: we've added author and robots
- * directives, expanded keyword coverage and included an OG/Twitter image.
- */
+// Global metadata for the entire application.  This configuration will be
+// automatically injected into the <head> of every page by Next.js.  It
+// describes who you are and what your site is about.  Update the URL to
+// reflect your actual deployment domain.
+export const metadata = {
+  title: "Khoubaieb Maamouri – Junior Frontend Entwickler in Darmstadt",
+  description:
+    "Portfolio of Khoubaieb Maamouri, a junior frontend developer based in Darmstadt. Explore projects built with React, Next.js, Tailwind CSS and more.",
+  keywords:
+    "Frontend Entwickler Darmstadt, React Developer Germany, Next.js Portfolio, Webentwickler, Tailwind CSS, JavaScript",
+  authors: { name: "Khoubaieb Maamouri" },
+  robots: "index, follow",
+  alternates: {
+    canonical: "https://www.khoubaiebmaamouri.website/",
+  },
+  openGraph: {
+    title: "Khoubaieb Maamouri – Junior Frontend Entwickler",
+    description:
+      "Portfolio eines Junior Frontend‑Entwicklers in Darmstadt (React, Next.js, Tailwind CSS).",
+    url: "https://www.khoubaiebmaamouri.website/",
+    siteName: "Khoubaieb Maamouri Portfolio",
+    type: "website",
+    locale: "de_DE",
+    images: [
+      {
+        url: "https://www.khoubaiebmaamouri.website/social-preview.png",
+        width: 1200,
+        height: 630,
+        alt: "Portrait of Khoubaieb Maamouri",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Khoubaieb Maamouri – Junior Frontend Entwickler",
+    description:
+      "Portfolio eines Junior Frontend‑Entwicklers in Darmstadt (React, Next.js, Tailwind CSS).",
+    images: ["https://www.khoubaiebmaamouri.website/social-preview.png"],
+  },
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="de">
       <head>
-        <meta charSet="UTF-8" />
+        {/* Basic meta tags for character encoding and responsive design */}
+        <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Khoubaieb Maamouri | Junior Frontend Entwickler in Darmstadt</title>
-        <meta
-          name="description"
-          content="Entdecken Sie das Portfolio von Khoubaieb Maamouri, einem Junior Frontend Entwickler in Darmstadt, spezialisiert auf Next.js, React und modernste Webtechnologien."
-        />
-        <meta
-          name="keywords"
-          content="Frontend Entwickler Darmstadt, Junior Developer Hessen, Next.js, React, TypeScript, Tailwind CSS"
-        />
-        <meta name="author" content="Khoubaieb Maamouri" />
-        <meta name="robots" content="index,follow" />
-        <link rel="canonical" href="https://www.khoubaiebmaamouri.website" />
-        <meta property="og:title" content="Khoubaieb Maamouri | Junior Frontend Entwickler in Darmstadt" />
-        <meta
-          property="og:description"
-          content="Portfolio eines Junior Frontend Entwicklers aus Hessen, spezialisiert auf React und Next.js."
-        />
-        <meta property="og:url" content="https://www.khoubaiebmaamouri.website" />
-        <meta property="og:type" content="website" />
-        {/* Provide a default preview image for social sharing */}
-        <meta property="og:image" content="/KM.png" />
-        <meta property="og:locale" content="de_DE" />
-        <meta property="og:site_name" content="Khoubaieb Maamouri Portfolio" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Khoubaieb Maamouri | Junior Frontend Entwickler in Darmstadt" />
-        <meta
-          name="twitter:description"
-          content="Portfolio für React, JavaScript und TypeScript Projekte in Deutschland"
-        />
-        <meta name="twitter:image" content="/KM.png" />
-        {/* Structured data for rich snippets */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              name: "Khoubaieb Maamouri",
-              jobTitle: "Junior Frontend Entwickler",
-              url: "https://www.khoubaiebmaamouri.website",
-              address: {
-                "@type": "PostalAddress",
-                addressLocality: "Darmstadt",
-                addressRegion: "Hessen",
-                addressCountry: "DE",
-              },
-              sameAs: [
-                "https://github.com/khoubaib-sudo",
-                "https://www.linkedin.com/in/khoubaib-maamouri/",
-              ],
-              knowsAbout: [
-                "Next.js",
-                "React",
-                "TypeScript",
-                "Tailwind CSS",
-                "shadcn ui",
-                "Zustand",
-                "Prisma",
-                "Supabase",
-                "Three.js",
-                "WebGL",
-              ],
-            }),
-          }}
-        />
       </head>
       <body className="cursor-none">
+        {/* Loader displayed while the rest of the application is loading */}
         <Loader />
         <Theming>
           <LanguageProvider>
+            {/* Site header */}
             <HeaderPage />
+            {/* Main page content */}
             {children}
+            {/* Footer */}
             <Footer />
           </LanguageProvider>
         </Theming>
